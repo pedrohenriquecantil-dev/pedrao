@@ -1,0 +1,256 @@
+* 
+/* HERO */
+
+.hero {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 75% 45%, #6b21a8 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, #db2777 0%, transparent 20%),
+        #090014;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #d946ef;
+    border-radius: 50%;
+    right: -150px;
+    top: 80px;
+    opacity: 0.3;
+}
+
+.hero-content {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    color: #d946ef;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(70px, 12vw, 150px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #d946ef;
+}
+
+.hero-text {
+    max-width: 560px;
+    color: #c4b5fd;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 35px 0;
+}
+
+.event-info {
+    display: flex;
+    gap: 70px;
+    margin-bottom: 35px;
+}
+
+.event-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-info strong {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+}
+
+.event-info span {
+    color: #a78bfa;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 28px;
+    background: #d946ef;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #a21caf;
+    transform: translateY(-3px);
+}
+
+
+/* DESTAQUES */
+
+.highlights {
+    padding: 100px 7%;
+    background: #0e0018;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #d946ef;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 50px;
+    margin-top: 8px;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.artist-card {
+    background: #160525;
+    border: 1px solid #32104d;
+    transition: 0.3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-8px);
+    border-color: #d946ef;
+}
+
+.artist-image {
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-one {
+    background:
+        linear-gradient(135deg, #4c1d95, #ec4899);
+}
+
+.image-two {
+    background:
+        linear-gradient(135deg, #be185d, #581c87);
+}
+
+.image-three {
+    background:
+        linear-gradient(135deg, #7e22ce, #db2777);
+}
+
+.artist-info {
+    padding: 25px;
+}
+
+.artist-info span {
+    color: #d946ef;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.artist-info h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    margin: 10px 0 5px;
+}
+
+.artist-info p {
+    color: #a78bfa;
+}
+
+.outline-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 25px;
+    border: 1px solid #d946ef;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.outline-button:hover {
+    background: #d946ef;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 40px 7%;
+    background: #050008;
+    border-top: 1px solid #29133c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a78bfa;
+    font-size: 13px;
+}
+
+footer strong {
+    font-family: "Orbitron", sans-serif;
+    color: #ffffff;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .event-info {
+        gap: 30px;
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
